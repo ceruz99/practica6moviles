@@ -2,16 +2,17 @@ package com.example.practica6.server.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Movie(
     @SerializedName("imdbID")
-    val imdbID: String?,
+    val imdbID: String,
     @SerializedName("Poster")
-    val poster: String?,
+    val poster: String,
     @SerializedName("Title")
-    val title: String?,
+    val title: String,
     @SerializedName("Type")
-    val type: String?,
+    val type: String,
     @SerializedName("Year")
-    val year: String?
-)
+    val year: String
+): Serializable

@@ -2,4 +2,8 @@
     <string name="app_name">practica6</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
+    <string name="title_list">List</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="titleExample">Example</string>
+    <string name="detail">Detail</string>
 </resources>

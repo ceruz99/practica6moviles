@@ -11,7 +11,7 @@ import com.squareup.picasso.Picasso
 
 class ListAdapter (
     private var moviesList: ArrayList<Movie>,
-    private val onItemClick: (Movie) -> Unit
+    private val onItemClicked: (Movie) -> Unit
         ): RecyclerView.Adapter<ListAdapter.MoviesViewHolder>(){
 
             class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -20,10 +20,10 @@ class ListAdapter (
                 fun bindMovie(movie: Movie){
                     with(binding){
                         Picasso.get().load(movie.poster).into(imageView)
-                        imageView.setOnClickListener(){
+                        /*imageView.setOnClickListener(){
                             tittleTextview.text = movie.title
                             yearTextview.text=movie.year
-                        }
+                        }*/
                     }
                 }
             }
@@ -38,7 +38,7 @@ class ListAdapter (
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
         val movie = moviesList[position]
         holder.bindMovie(movie)
-        holder.itemView.setOnClickListener{onItemClick(movie)}
+        holder.itemView.setOnClickListener{onItemClicked(movie)}
     }
 
     fun appendItems(newList: ArrayList<Movie>){
