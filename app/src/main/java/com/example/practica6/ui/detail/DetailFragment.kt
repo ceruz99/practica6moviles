@@ -27,6 +27,18 @@ class DetailFragment : Fragment() {
 
         val movie = args.movie
 
+        viewModel.searchMovie(movie.imdbID.substring(2,9).toInt())
+
+        viewModel.isMovieSaved.observe(viewLifecycleOwner){isMovieSaved->
+            this.isMovieSaved = isMovieSaved
+            if(isMovieSaved){
+                binding.imageView3.setImageDrawable(resources.getDrawable(R.drawable.baseline_check_24))
+            }
+            else{
+                binding.imageView3.setImageDrawable(resources.getDrawable(R.drawable.baseline_save_24))
+            }
+        }
+
         with(binding){
             titleTextView.text= movie.title
             yearTextView.text=movie.year

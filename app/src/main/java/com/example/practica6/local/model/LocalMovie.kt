@@ -10,4 +10,5 @@ data class LocalMovie (
     @PrimaryKey @ColumnInfo(name = "id") val id: Int?,
     @ColumnInfo(name = "name") val name : String?,
     @ColumnInfo(name = "year") val year : String?,
+    @ColumnInfo(name = "poster") val poster : String?
         )

@@ -6,4 +6,8 @@
     <string name="title_favorites">Favorites</string>
     <string name="titleExample">Example</string>
     <string name="detail">Detail</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
+    <string name="title_batmanMovies">Batman Movies</string>
+    <string name="title_savedMovies">Saved Movies</string>
 </resources>
